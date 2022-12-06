@@ -4,17 +4,16 @@ import Form from "react-bootstrap/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-
-
-const [me, setme] = useState('')
-const [san, setsan] = useState()
+  const [me, setme] = useState("");
+  const [san, setsan] = useState({id:0,name:'wait a minuite who are you '});
 
   var user = [
-    { id: 1, name: "A" },
-    { id: 2, name: "b" },
-    { id: 3, name: "c" },
-    { id: 4, name: "d" },
-    { id: 5, name: "e" },
+    { id: 1, name: "likith" },
+    { id: 2, name: "syed sohail" },
+    { id: 3, name: "dinesh" },
+    { id: 4, name: "santhosh" },
+    { id: 5, name: "sagar" },
+    { id: 5, name: "vp" },
   ];
 
   var santa = [
@@ -23,25 +22,19 @@ const [san, setsan] = useState()
     { id: 3, name: "c" },
     { id: 4, name: "d" },
     { id: 5, name: "e" },
-  ]
+  ];
 
-
+  function handleSelect(e) {
+    setme(e.target.value );
+  }
+  console.log(me);
   
 
-
- function handleSelect(e){
-setme({me:e.target.value})
-}
-  console.log(me)
-
-
- function handleClick(){
-  const random = santa[Math.floor(Math.random() * santa.length)];
-  setsan(random)
-  console.log(san)
-
- }
-
+  function handleClick(e) {
+    const random = user[Math.floor(Math.random() * user.length)];
+    console.log(random)
+    setsan(random);
+  }
 
   return (
     <div>
@@ -55,7 +48,6 @@ setme({me:e.target.value})
         <div>
           <label>Who are you?</label>
           <Form.Select className="users" onChange={handleSelect}>
-            <option>select</option>
             {user.map((user) => (
               <option key={user.id}>{user.name}</option>
             ))}
@@ -64,12 +56,12 @@ setme({me:e.target.value})
 
         <div className="wrap">
           <button type="submit" className="button" onClick={handleClick}>
-            Choose your santa 
+            Choose your santa
           </button>
         </div>
 
         <div id="username">
-        <h1>a</h1>
+          <h5 style={{width:'18vw'}}>{san.name}</h5>
         </div>
       </div>
     </div>
