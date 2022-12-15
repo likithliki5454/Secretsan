@@ -30,8 +30,37 @@
   margin: 13vw;
 }
 
+.loginp{
+
+  background-color:rgb(197 197 197);
+  height: 30vw;
+  width: 30vw;
+  margin-left: 30vw;
+}
 
 
+.lb{
+  padding: 1vw;
+  margin-left: 4vw;
+  font-size: 1.8vw;
+}
+
+#fs{
+  margin-left: 7.5vw;
+  font-size: 1.5vw;
+  background-color: aliceblue;
+  margin-top: 3vw;
+}
+
+.b{
+  margin-left: 7.4vw;
+  font-size: 1vw;
+  width: 10vw;
+  padding: 0.3vw;
+  border-radius: 1vw;
+  margin-top: 5vw;
+  background-color: rgb(97, 179, 97);
+}
 
 
 
